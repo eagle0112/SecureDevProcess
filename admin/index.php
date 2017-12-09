@@ -12,8 +12,9 @@
 			if (!isset($_SESSION['id'])) {
 				header('location:login.php');
 			}else{
-                require '../shared/cnx.php';
-                include 'includes/menuHome.php';
+				require '../shared/cnx.php';
+				$page = 'home';
+                include 'includes/menu.php';
 		?>
 
 		<?php

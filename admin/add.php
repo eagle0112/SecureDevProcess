@@ -13,7 +13,8 @@
 				header('location:login.php');
 			}else{
                 require '../shared/cnx.php';
-                include 'includes/menuAdd.php';
+                $page = 'add';
+                include 'includes/menu.php';
 		?>
 
 		<?php
