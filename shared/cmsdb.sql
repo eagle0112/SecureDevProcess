@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 09 déc. 2017 à 21:26
+-- Généré le :  sam. 09 déc. 2017 à 21:31
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -57,7 +57,8 @@ CREATE TABLE `utilisateur` (
 -- Index pour la table `article`
 --
 ALTER TABLE `article`
-  ADD PRIMARY KEY (`idArt`);
+  ADD PRIMARY KEY (`idArt`),
+  ADD KEY `fk_1` (`IdPoster`);
 
 --
 -- Index pour la table `utilisateur`
@@ -80,6 +81,16 @@ ALTER TABLE `article`
 --
 ALTER TABLE `utilisateur`
   MODIFY `idUser` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `article`
+--
+ALTER TABLE `article`
+  ADD CONSTRAINT `fk_1` FOREIGN KEY (`IdPoster`) REFERENCES `utilisateur` (`idUser`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
