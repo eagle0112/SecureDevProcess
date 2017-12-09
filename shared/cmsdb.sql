@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 09 déc. 2017 à 21:40
+-- Généré le :  sam. 09 déc. 2017 à 21:44
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -33,6 +33,14 @@ CREATE TABLE `admin` (
   `adminName` varchar(20) NOT NULL,
   `psd` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `admin`
+--
+
+INSERT INTO `admin` (`idAdmin`, `adminName`, `psd`) VALUES
+(1, 'hijikila', '123'),
+(2, 'eagle002', '123');
 
 -- --------------------------------------------------------
 
@@ -74,7 +82,7 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT pour la table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `article`
