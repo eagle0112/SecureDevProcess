@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 09 déc. 2017 à 21:44
+-- Généré le :  sam. 09 déc. 2017 à 21:46
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -54,6 +54,7 @@ CREATE TABLE `article` (
   `Description` varchar(120) NOT NULL,
   `FullDescr` text NOT NULL,
   `imgPath` varchar(30) NOT NULL,
+  `date` date DEFAULT NULL,
   `IdPoster` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
