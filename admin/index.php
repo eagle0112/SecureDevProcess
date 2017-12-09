@@ -3,13 +3,13 @@
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-3.0.3/css/bootstrap.min.css">
 </head>
 <body>
 	<div class = "container">
 		<div class="wrapper">
 			<form action="" method="post" name="Login_Form" class="form-signin">       
-			    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+			    <h3 class="form-signin-heading">Welcome! Please Sign In</h3>
 				  <hr class="colorgraph"><br>
 				  
 				  <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
@@ -22,7 +22,7 @@
 	<?php 
 		extract($_POST);
 		if (isset($submit)) {
-			require 'commun.php';
+			require '../shared/cnx.php';
 			// $query="select * from comptes where login='$username' and password='$password'";
 			// $res=mysql_query($query)or die(mysql_error());
 			// $row=mysql_fetch_array($res);
