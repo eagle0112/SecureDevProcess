@@ -1,4 +1,4 @@
-<div class="row menu">
+<div class="menu">
     <div class="page-header text-center">
         <h1>Admin <?php echo $_SESSION['name']; ?></h1>      
     </div>
